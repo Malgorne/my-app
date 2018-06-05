@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { Home } from './components';
+
 const Index = () => {
-  return <div>Hello React!</div>;
+  return <Home />;
 };
 
 ReactDOM.render(<Index />, document.getElementById('index'));

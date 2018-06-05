@@ -15,18 +15,7 @@ module.exports = {
       }
     }, {
       test: /\.css$/,
-      use: [{
-        loader: 'style-loader'
-      }, {
-        loader: 'css-loader',
-        options: {
-          modules: true,
-          importLoaders: 1,
-          localIndentName: '[name]_[local]_[hash:base64]',
-          sourceMap: true,
-          minimize: true
-        }
-      }]
+      use: ['style-loader','css-loader']
     }]
   },
   plugins: [htmlPlugin]
