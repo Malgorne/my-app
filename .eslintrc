@@ -1,0 +1,11 @@
+{
+  "extends": "eslint-config-airbnb-es5",
+  "rules": {
+    "react/jsx-wrap-multilines": "off",
+    "consistent-return": "off",
+    "func-names": "off",
+    "no-console": ["error", "allow": ["info", "log", "debug", "error", "assert"]],
+    "no-underscore-dangle": "error",
+    "valid-jsdoc": ["error", { "requireReturn": false }]
+  }
+}
