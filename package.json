@@ -21,6 +21,11 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-es5": "^1.2.0",
+    "eslint-plugin-react": "^7.9.1",
+    "eslint-plugin-requirejs": "^3.2.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   }
