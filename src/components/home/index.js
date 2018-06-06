@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './style.css';
+import './style.sass';
 
 export default class Home extends React.Component {
   render() {

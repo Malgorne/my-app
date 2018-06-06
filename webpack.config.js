@@ -14,8 +14,8 @@ module.exports = {
         loader: 'babel-loader'
       }
     }, {
-      test: /\.css$/,
-      use: ['style-loader','css-loader']
+      test: /\.sass$/,
+      use: ['style-loader','css-loader', 'sass-loader']
     }]
   },
   plugins: [htmlPlugin]
