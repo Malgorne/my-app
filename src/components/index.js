@@ -1,5 +1,5 @@
-import home from './home';
+import Home from './home';
 
 export {
-  home
+  Home
 };
