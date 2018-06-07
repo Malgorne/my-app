@@ -2,6 +2,10 @@ import React from 'react';
 
 import './style.sass';
 
+/**
+ * First component. Just say hello.
+ * @return {Void} a jsx object.
+ */
 export default class Home extends React.Component {
   render() {
     return (
