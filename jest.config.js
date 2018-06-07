@@ -1,13 +1,13 @@
 module.exports = {
   transformIgnorePatterns: [
-   'node_modules'
+    'node_modules'
   ],
-	collectCoverage: true,
+  collectCoverage: true,
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/'
   ],
   moduleFileExtensions: ['js'],
-	moduleNameMapper: {
+  moduleNameMapper: {
     '^\\./style(\\.sass)?$': 'identity-obj-proxy'
   }
 };

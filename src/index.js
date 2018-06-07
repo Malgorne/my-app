@@ -4,8 +4,6 @@ import './style.sass';
 
 import { Home } from './components';
 
-const Index = () => {
-  return <Home />;
-};
+const Index = () => <Home />;
 
 ReactDOM.render(<div id="main"><p>MAIN</p><Index /></div>, document.getElementById('index'));
