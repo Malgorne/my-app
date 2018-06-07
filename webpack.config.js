@@ -18,5 +18,6 @@ module.exports = {
       use: ['style-loader', 'css-loader', 'sass-loader']
     }]
   },
-  plugins: [htmlPlugin]
+  plugins: [htmlPlugin],
+  modules: ['node_modules']
 };
