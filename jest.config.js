@@ -1,6 +1,6 @@
 module.exports = {
   transformIgnorePatterns: [
-   'node_modules/(?!arkham)'
+   'node_modules'
   ],
 	collectCoverage: true,
   testPathIgnorePatterns: [
@@ -8,7 +8,6 @@ module.exports = {
   ],
   moduleFileExtensions: ['js'],
 	moduleNameMapper: {
-    '^\\./style(\\.sass)?$': '<rootDir>/**/mock/css.js',
-    '\\.(png|jpg)$': '<rootDir>/**/mock/css.js'
+    '^\\./style(\\.sass)?$': 'identity-obj-proxy'
   }
 };
