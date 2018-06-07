@@ -32,8 +32,16 @@
         "include": ["jsdoc/"]
       }
     },
-    "css": [
-      "style.css"
-    ]
+    "css": ["style.css"],
+    "tabNames": {
+      "api": "my-app API",
+      "tutorials": "Examples"
+    },
+    "logo": {
+      "url": "react-icon.png",
+      "width": "150px",
+      "height": "100px",
+      "link": "https://reactjs.org/tutorial/tutorial.html"
+    }
   }
 }
