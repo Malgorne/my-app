@@ -2,7 +2,12 @@
   "recurseDepth": 10,
   "source": {
     "include": ["README.md", "src"],
-    "exclude": ["node_module", "dist", "coverage", "doc"],
+    "exclude": [
+      "node_modules",
+      "dist",
+      "coverage",
+      "doc"
+    ],
     "includePattern": ".+\\.js(doc|x)?$",
     "excludePattern": "(^|\\/|\\\\)_"
   },
@@ -15,21 +20,12 @@
     "allowUnknownTags": true
   },
   "opts": {
-    "destination": "./doc"
+    "destination": "./doc",
+    "template": "node_modules/tui-jsdoc-template"
   },
-  "plugins": [
-    "plugins/markdown"
-  ],
+  "plugins": ["plugins/markdown"],
   "templates": {
-    "cleverLinks": false,
-    "monospaceLinks": false,
-    "default": {
-      "outputSourceFiles": true
-    },
-    "path": "ink-docstrap",
-    "theme": "cerulean",
-    "navType": "vertical",
-    "linenums": true,
-    "dateFormat": "MMMM Do YYYY, h:mm:ss a"
+    "name": "my-app documentation!",
+    "footerText": "Have fun!"
   }
 }
