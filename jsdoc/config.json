@@ -26,6 +26,14 @@
   "plugins": ["plugins/markdown"],
   "templates": {
     "name": "my-app documentation!",
-    "footerText": "Have fun!"
+    "footerText": "Have fun!",
+    "default": {
+      "staticFiles": {
+        "include": ["jsdoc/"]
+      }
+    },
+    "css": [
+      "style.css"
+    ]
   }
 }

@@ -6,7 +6,7 @@
     "start": "webpack-dev-server --mode development --progress --colors --open",
     "build": "webpack --mode production",
     "test": "jest",
-    "doc": "jsdoc --readme README.md -c jsdoc.json -r --debug"
+    "doc": "jsdoc --readme README.md -c jsdoc/config.json -r --debug"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
