@@ -1,4 +1,6 @@
 import Picture from './picture';
+import Board from './board';
+import Square from './square';
 
 /**
  * Expose the components.
@@ -6,5 +8,7 @@ import Picture from './picture';
  * @module components
  */
 export {
-  Picture
+  Picture,
+  Board,
+  Square
 };

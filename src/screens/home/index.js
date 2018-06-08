@@ -1,5 +1,5 @@
 import React from 'react';
-import { Picture } from 'components';
+import { Board } from 'components';
 
 import './style.sass';
 
@@ -13,8 +13,13 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="home">
-        <h1>Welcome home</h1>
-        <Picture />
+        <div className="game-board">
+          <Board />
+        </div>
+        <div className="game-info">
+          <div>{/* status */}</div>
+          <ol>{/* TODO */}</ol>
+        </div>
       </div>
     );
   }
