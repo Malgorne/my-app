@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../../assets/img/mario.jpeg';
+import img from '../../assets/img/under-construction.png';
 
 import './style.sass';
 
@@ -13,7 +13,7 @@ export default class Picture extends React.Component {
   render() {
     return (
       <div className="picture">
-        <img src={img} alt="Smiley face" />
+        <img src={img} alt="under construction" />
       </div>
     );
   }
