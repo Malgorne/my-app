@@ -7,7 +7,7 @@ import './style.sass';
  * Needed to bind a picture.
  * @module picture
  * @memberof components
- * @return {Void} a jsx object.
+ * @return {Object} A React component.
  */
 export default class Picture extends React.Component {
   render() {

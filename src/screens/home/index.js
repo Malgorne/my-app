@@ -4,10 +4,10 @@ import { Picture } from 'components';
 import './style.sass';
 
 /**
- * First component. Just say hello.
+ * Screen home.
  * @module home
  * @memberof screens
- * @return {Void} a jsx object.
+ * @return {Object} A React component.
  */
 export default class Home extends React.Component {
   render() {

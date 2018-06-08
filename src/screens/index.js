@@ -1,7 +1,7 @@
 import Home from './home';
 
 /**
- * Expose the components.
+ * Expose the screens.
  * @namespace screens
  * @module screens
  */

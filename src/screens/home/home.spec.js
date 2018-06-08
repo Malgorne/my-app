@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 /**
  * Unit tests for component/home.
  */
-describe('components/home', () => {
+describe('screens/home', () => {
   it('should be defined', () => expect(Home).toBeDefined());
   it('should initialize the component', () => expect(new Home()).toBeDefined());
   it('should respect the semantic', () => {
