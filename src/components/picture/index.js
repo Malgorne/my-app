@@ -13,7 +13,7 @@ export default class Picture extends React.Component {
   render() {
     return (
       <div className="picture">
-        <img src={img} alt="Smiley face" height="42" width="42"/>
+        <img src={img} alt="Smiley face" />
       </div>
     );
   }
