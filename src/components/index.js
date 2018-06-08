@@ -1,4 +1,4 @@
-import Home from './home';
+import Picture from './picture';
 
 /**
  * Expose the components.
@@ -6,5 +6,5 @@ import Home from './home';
  * @module components
  */
 export {
-  Home
+  Picture
 };
