@@ -1,4 +1,5 @@
 import React from 'react';
+import img from '../../assets/img/mario.jpeg';
 
 import './style.sass';
 
@@ -12,7 +13,7 @@ export default class Picture extends React.Component {
   render() {
     return (
       <div className="picture">
-        <p>coucou</p>
+        <img src={img} alt="Smiley face" height="42" width="42"/>
       </div>
     );
   }

@@ -29,8 +29,7 @@ module.exports = {
   resolve: {
     alias: {
       components: path.join(__dirname, 'src', 'components'),
-      screens: path.join(__dirname, 'src', 'screens'),
-      img: path.join(__dirname, 'src/assets', 'img')
+      screens: path.join(__dirname, 'src', 'screens')
     }
   }
 };
