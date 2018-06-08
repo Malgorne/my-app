@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
@@ -16,7 +17,20 @@ module.exports = {
     }, {
       test: /\.sass$/,
       use: ['style-loader', 'css-loader', 'sass-loader']
+    }, {
+      test: /\.(otf|ttf)$/,
+      loader: 'url-loader?limit=8192&name=assets/fonts/font-[hash:6].[ext]'
+    }, {
+      test: /\.(png|jpg|jpeg|gif)$/,
+      loader: 'url-loader?limit=8192&name=assets/img/img-[hash:6].[ext]'
     }]
   },
-  plugins: [htmlPlugin]
+  plugins: [htmlPlugin],
+  resolve: {
+    alias: {
+      components: path.join(__dirname, 'src', 'components'),
+      screens: path.join(__dirname, 'src', 'screens'),
+      img: path.join(__dirname, 'src/assets', 'img')
+    }
+  }
 };
