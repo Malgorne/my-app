@@ -1,4 +1,4 @@
-import Home from './home';
+import TicTacToe from './tic-tac-toe';
 
 /**
  * Expose the screens.
@@ -6,5 +6,5 @@ import Home from './home';
  * @module screens
  */
 export {
-  Home
+  TicTacToe
 };

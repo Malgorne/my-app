@@ -4,14 +4,14 @@ import { Board } from 'components';
 import './style.sass';
 
 /**
- * Screen home.
- * @module home
- * @constructs Home
- * @lends Home
+ * Screen tic-tac-toe.
+ * @module tic-tac-toe
+ * @constructs TicTacToe
+ * @lends TicTacToe
  * @memberof screens
  * @return {Object} A React component.
  */
-export default class Home extends React.Component {
+export default class TicTacToe extends React.Component {
   /**
    * Class' constructor. Contains the states of the screen.
    * @constructs
@@ -110,7 +110,7 @@ export default class Home extends React.Component {
   render() {
     const { current, status, moves } = this.handleStatus();
     return (
-      <div className="home">
+      <div className="tic-tac-toe">
         <div className="game-board">
           <Board
             squares={current.squares}

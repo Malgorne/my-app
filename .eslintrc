@@ -6,7 +6,7 @@
     "func-names": "off",
     "no-console": ["error", "allow": ["info", "log", "debug", "error", "assert"]],
     "no-underscore-dangle": "error",
-    "valid-jsdoc": ["error", { "requireReturn": false }]
+    "valid-jsdoc": ["error", { "requireReturn": false }],
   },
   "plugins": ["jest"],
   "env": {

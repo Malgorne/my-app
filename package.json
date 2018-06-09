@@ -20,6 +20,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-es5": "^1.2.0",
+    "eslint-plugin-immutable": "^1.0.0",
     "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-react": "^7.9.1",
     "file-loader": "^1.1.11",
@@ -39,6 +40,8 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "immutable": "^3.8.2",
+    "lodash": "^4.17.10",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   }
