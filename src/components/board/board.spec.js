@@ -6,7 +6,7 @@ import { shallow, mount } from 'enzyme';
  * Unit tests for components/board.
  */
 describe('components/board', () => {
-  it('should respect the semantic', () => {
+  it('should render without crashing', () => {
     let squares = Array(9).fill(null);
     shallow(<Board squares={squares}/>);
   });
