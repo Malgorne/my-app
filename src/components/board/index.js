@@ -10,23 +10,21 @@ import './style.sass';
  * @return {Object} A React component.
  */
 export default class Board extends React.Component {
+  /**
+   * Renders squares
+   * @param {Int} i Sqaure index.
+   * @return {Object} A jsx' object Square.
+   */
   renderSquare(i) {
     return (<Square
       value={this.props.squares[i]}
       onClick={() => this.props.onClick(i)}
     />);
   }
-  handleClick(i) {
-    const squares = this.state.squares.slice();
-    if (this.calculateWinner(squares) || squares[i]) {
-      return;
-    }
-    squares[i] = this.state.xIsNext ? 'X' : 'O';
-    this.setState({
-      squares,
-      xIsNext: !this.state.xIsNext
-    });
-  }
+  /**
+   * Screen's render.
+   * @return {Object} A jsx' object.
+   */
   render() {
     return (
       <div>

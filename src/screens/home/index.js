@@ -6,10 +6,18 @@ import './style.sass';
 /**
  * Screen home.
  * @module home
+ * @constructs Home
+ * @lends Home
  * @memberof screens
  * @return {Object} A React component.
  */
 export default class Home extends React.Component {
+  /**
+   * Class' constructor. Contains the states of the screen.
+   * @constructs
+   * @param {Object} props Data binding
+   *
+   */
   constructor(props) {
     super(props);
     this.state = {
@@ -20,6 +28,11 @@ export default class Home extends React.Component {
       xIsNext: true
     };
   }
+  /**
+   * Set the state after each right click.
+   * @param {Object} i Index of the current square.
+   *
+   */
   handleClick(i) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
@@ -32,6 +45,11 @@ export default class Home extends React.Component {
       xIsNext: !this.state.xIsNext
     });
   }
+  /**
+   * Returns the winner.
+   * @param {Object} squares List of current squares.
+   * @return {Object|null} The winner.
+   */
   calculateWinner(squares) {
     const victoryCases = [
       [0, 1, 2],
@@ -51,14 +69,16 @@ export default class Home extends React.Component {
     }
     return null;
   }
+  /**
+   * Manage status' handling.
+   * @return {Object} Returns current grid, player's status, moves' list.
+   */
   handleStatus() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = this.calculateWinner(current.squares);
+    const output = { current };
 
-    const output = {
-      current
-    };
     if (winner) output.status = `Winner: ${winner}`;
     else output.status = `Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
     output.moves = history.map((step, move) => {
@@ -71,15 +91,22 @@ export default class Home extends React.Component {
         </li>
       );
     });
-    console.log(output);
     return output;
   }
+  /**
+   * Set the states.
+   * @param {Object} step the current step.
+   */
   jumpTo(step) {
     this.setState({
       stepNumber: step,
       xIsNext: (step % 2) === 0
     });
   }
+  /**
+   * Screen's render.
+   * @return {Object} A jsx' object.
+   */
   render() {
     const { current, status, moves } = this.handleStatus();
     return (
