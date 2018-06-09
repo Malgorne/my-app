@@ -1,15 +1,12 @@
 import React from 'react';
 import { Home } from 'screens';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 
 /**
- * Unit tests for component/home.
+ * Unit tests for screens/home.
  */
 describe('screens/home', () => {
-  it('should be defined', () => expect(Home).toBeDefined());
-  it('should initialize the component', () => expect(new Home()).toBeDefined());
-  it('should respect the semantic', () => {
-    const home = renderer.create(<Home />);
-    expect(home).toMatchSnapshot();
+  it('should render without crashing', () => {
+    shallow(<Home />);
   });
 });
