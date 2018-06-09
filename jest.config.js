@@ -1,4 +1,5 @@
 module.exports = {
+  setupTestFrameworkScriptFile: '<rootDir>/setUpTests.js',
   transformIgnorePatterns: [
     'node_modules'
   ],

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Picture } from 'components';
+import { Square } from 'components';
 import { shallow } from 'enzyme';
 
 /**
@@ -7,6 +7,6 @@ import { shallow } from 'enzyme';
  */
 describe('components/picture', () => {
   it('should render without crashing', () => {
-    shallow(<Picture />);
+    shallow(<Square />);
   });
 });
