@@ -11,14 +11,25 @@ import './style.sass';
  */
 export default class Board extends React.Component {
   renderSquare(i) {
-    return <Square />;
+    return (<Square
+      value={this.props.squares[i]}
+      onClick={() => this.props.onClick(i)}
+    />);
+  }
+  handleClick(i) {
+    const squares = this.state.squares.slice();
+    if (this.calculateWinner(squares) || squares[i]) {
+      return;
+    }
+    squares[i] = this.state.xIsNext ? 'X' : 'O';
+    this.setState({
+      squares,
+      xIsNext: !this.state.xIsNext
+    });
   }
   render() {
-    const status = 'Next player: X';
-
     return (
       <div>
-        <div className="status">{status}</div>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
