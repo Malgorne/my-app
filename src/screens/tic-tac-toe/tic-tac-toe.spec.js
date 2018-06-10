@@ -1,13 +1,13 @@
 import React from 'react';
-import { Home } from 'screens';
+import { TicTacToe } from 'screens';
 import { shallow, mount } from 'enzyme';
 
 /**
- * Unit tests for screens/home.
+ * Unit tests for screens/tic-tac-toe.
  */
-describe('screens/home', () => {
+describe('screens/tic-tac-toe', () => {
   it('should render without crashing', () => {
-    shallow(<Home />);
+    shallow(<TicTacToe />);
   });
 
   const simulateParty = wrapper => {
@@ -27,16 +27,20 @@ describe('screens/home', () => {
   };
 
   it('should render game status correctly', () => {
-    const wrapper = mount(<Home/>);
+    const wrapper = mount(<TicTacToe/>);
     const firstPlayer = wrapper.find('div.game-info').children().first().text();
     expect(firstPlayer).toEqual('Next player: X');
+
     const button = wrapper.find('button.square').first();
     button.simulate('click');
     expect(wrapper.find('.game-info ol li').length).toEqual(2);
+
     const secondPlayer = wrapper.find('div.game-info').children().first().text();
     expect(secondPlayer).toEqual('Next player: O');
+
     simulateParty(wrapper);
     expect(wrapper.find('.game-info ol li').length).toEqual(6);
+
     // button already clicked, no change
     const turn6 = wrapper.find('button.square').at(8);
     turn6.simulate('click');
@@ -47,7 +51,7 @@ describe('screens/home', () => {
   });
 
   it('should render the right turns', () => {
-    const wrapper = mount(<Home/>);
+    const wrapper = mount(<TicTacToe/>);
     simulateParty(wrapper);
     const button1 = wrapper.find('.game-info ol li button').at(2);
     button1.simulate('click');

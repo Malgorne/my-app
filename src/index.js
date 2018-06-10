@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.sass';
 
-import { Home } from 'screens';
+import { TicTacToe } from 'screens';
 
 ReactDOM.render(
   <div id="main">
-    <p>MAIN</p>
-    <Home />
+    <TicTacToe />
   </div>,
   document.getElementById('index')
 );
