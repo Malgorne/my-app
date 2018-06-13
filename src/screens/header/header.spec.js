@@ -3,9 +3,9 @@ import { Header } from 'screens';
 import { shallow } from 'enzyme';
 
 /**
- * Unit tests for screens/tic-tac-toe.
+ * Unit tests for screens/header.
  */
-describe('screens/home', () => {
+describe('screens/header', () => {
   it('should render without crashing', () => {
     shallow(<Header />);
   });

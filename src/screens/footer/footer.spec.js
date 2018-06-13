@@ -3,7 +3,7 @@ import { Footer } from 'screens';
 import { shallow } from 'enzyme';
 
 /**
- * Unit tests for screens/tic-tac-toe.
+ * Unit tests for screens/footer.
  */
 describe('screens/footer', () => {
   it('should render without crashing', () => {
