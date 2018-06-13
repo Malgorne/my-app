@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './style.sass';
 
@@ -19,6 +20,7 @@ export default class Home extends React.Component {
     return (
       <div id="home">
         <p>HOME WORKS</p>
+        <Link to={'/tictactoe'}>TIC-TAC-TOE</Link>
       </div>
     );
   }
