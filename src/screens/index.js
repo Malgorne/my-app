@@ -1,4 +1,7 @@
 import TicTacToe from './tic-tac-toe';
+import Home from './home';
+import Header from './header';
+import Footer from './footer';
 
 /**
  * Expose the screens.
@@ -6,5 +9,8 @@ import TicTacToe from './tic-tac-toe';
  * @module screens
  */
 export {
-  TicTacToe
+  TicTacToe,
+  Home,
+  Header,
+  Footer
 };
