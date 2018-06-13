@@ -8,18 +8,15 @@ import { TicTacToe, Home, Header, Footer } from 'screens';
 
 ReactDOM.render(
   <div id="main">
-    <Header />
+    <Header/>
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/tictactoe" component={TicTacToe}/>
+        <Route render={() => <div>Not Found</div>}/>
       </Switch>
     </BrowserRouter>
-    <Footer />
+    <Footer/>
   </div>,
   document.getElementById('index')
 );
-// <Route exact path='/' component={Home}/>
-//   {/* both /roster and /roster/:number begin with /roster */}
-//   <Route path='/roster' component={Roster}/>
-//   <Route path='/schedule' component={Schedule}/>

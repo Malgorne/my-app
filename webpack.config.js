@@ -32,5 +32,9 @@ module.exports = {
       screens: path.join(__dirname, 'src', 'screens'),
       assets: path.join(__dirname, 'src', 'assets/img')
     }
+  },
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './'
   }
 };
