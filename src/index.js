@@ -10,7 +10,7 @@ import { TicTacToe, Home, Header, Footer } from 'screens';
 const ownHistory = createBrowserHistory();
 
 ReactDOM.render(
-  <div id="main">
+  <div id="main" className="col-xs-offset-1 col-xs-10">
     <Header/>
     <BrowserRouter histrory={ownHistory}>
       <Switch>
