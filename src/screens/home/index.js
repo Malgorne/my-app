@@ -18,7 +18,7 @@ export default class Home extends React.Component {
    */
   render() {
     return (
-      <div id="home" className="btn btn-warning">
+      <div id="home">
         <h1>HOME WORKS</h1>
         <Link to={'/tictactoe'} className="btn btn-warning">TIC-TAC-TOE</Link>
       </div>
