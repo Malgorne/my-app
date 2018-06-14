@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { Grid, Row, Col } from 'react-bootstrap';
 
@@ -33,13 +33,13 @@ ReactDOM.render(
     </Row>
     <Row componentClass="section">
       <Col className="full" xs={12}>
-        <BrowserRouter history={appHistory}>
+        <Router history={appHistory}>
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/tictactoe" component={TicTacToe}/>
             <Route render={() => <div>Not Found</div>}/>
           </Switch>
-        </BrowserRouter>
+        </Router>
       </Col>
     </Row>
     <Row componentClass="section">
