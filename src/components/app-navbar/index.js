@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import { forEach } from 'lodash';
+import { forEach, set } from 'lodash';
 
 import './style.sass';
 
 /**
- * Build a navbar.
- * @module navbar
+ * Build the main navbar.
+ * @module appNavbar
  * @memberof components
  * @return {Object} A React component.
  */
@@ -15,7 +14,7 @@ export default class AppNavbar extends React.Component {
   constructor(props) {
     super(props);
     if (!props.links) return console.log("ERROR - This component needs a link's Array");
-    this.links = props.links;
+    set(this, 'links', props.links);
   }
 
   buildLi() {
@@ -31,18 +30,17 @@ export default class AppNavbar extends React.Component {
   }
 
   render() {
-    const items = this.buildLi();
     return (
-      <Navbar inverse collapseOnSelect>
+      <Navbar inverse collapseOnSelect fluid>
         <Navbar.Header>
           <Navbar.Brand>
             <a href="/">my-app incredible</a>
           </Navbar.Brand>
-          <Navbar.Toggle expanded="onToggle"/>
+          <Navbar.Toggle/>
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            { items }
+            { this.buildLi() }
           </Nav>
         </Navbar.Collapse>
       </Navbar>

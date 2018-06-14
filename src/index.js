@@ -22,18 +22,18 @@ const LINKS = [{
 ReactDOM.render(
   <Grid id="main" fluid>
     <Row componentClass="section">
-      <Col sm={12}>
+      <Col className="full" sm={12}>
         <Header/>
       </Col>
     </Row>
     <Row componentClass="section">
-      <Col sm={12}>
+      <Col className="full" xs={12}>
         <AppNavbar links={LINKS}/>
       </Col>
     </Row>
     <Row componentClass="section">
-      <Col sm={12}>
-        <BrowserRouter histrory={appHistory}>
+      <Col className="full" xs={12}>
+        <BrowserRouter history={appHistory}>
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/tictactoe" component={TicTacToe}/>
@@ -43,7 +43,7 @@ ReactDOM.render(
       </Col>
     </Row>
     <Row componentClass="section">
-      <Col sm={12}>
+      <Col className="full" xs={12}>
         <Footer/>
       </Col>
     </Row>
