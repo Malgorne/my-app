@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 import { TicTacToe, Home, Header, Footer } from 'screens';

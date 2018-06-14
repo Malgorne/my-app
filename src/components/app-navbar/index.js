@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { forEach } from 'lodash';
 
@@ -30,11 +31,20 @@ export default class AppNavbar extends React.Component {
   }
 
   render() {
+    const items = this.buildLi();
     return (
-      <Navbar>
-        <Nav>
-          { this.buildLi() }
-        </Nav>
+      <Navbar inverse collapseOnSelect>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href="/">my-app incredible</a>
+          </Navbar.Brand>
+          <Navbar.Toggle expanded="onToggle"/>
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav>
+            { items }
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     );
   }
