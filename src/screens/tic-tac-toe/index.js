@@ -1,6 +1,6 @@
 import React from 'react';
 import { Board } from 'components';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col, Button, ButtonToolbar } from 'react-bootstrap';
 
 import './style.sass';
 
@@ -87,9 +87,7 @@ export default class TicTacToe extends React.Component {
         'Go to move #' + move :
         'Go to game start';
       return (
-        <li key={move}>
-          <Button bsStyle="info" bsSize="xsmall" onClick={() => this.jumpTo(move)}>{desc}</Button>
-        </li>
+        <Button key={move} bsStyle="info" bsSize="xsmall" onClick={() => this.jumpTo(move)}>{desc}</Button>
       );
     });
     return output;
@@ -117,16 +115,16 @@ export default class TicTacToe extends React.Component {
             <h1>tic tac toe</h1>
           </Row>
           <Row className="tic-tac-toe">
-            <div className="game-board">
+            <Col className="game-board" xs={12} sm={6}>
               <Board
                 squares={current.squares}
                 onClick={(i) => this.handleClick(i)}
               />
-            </div>
-            <div className="game-info">
+            </Col>
+            <Col className="game-info" xs={12} sm={6}>
               <div>{status}</div>
-              <ol>{moves}</ol>
-            </div>
+              <ButtonToolbar>{moves}</ButtonToolbar>
+            </Col>
           </Row>
         </Col>
       </Row>
