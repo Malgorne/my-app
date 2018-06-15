@@ -1,9 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import { forEach, set } from 'lodash';
-import kirby from '../../assets/img/kirby.jpg';
-import mario from '../../assets/img/mario.jpg';
-import zelda from '../../assets/img/zelda.jpg';
 
 import { Picture } from 'components';
 
@@ -16,17 +13,33 @@ import './style.sass';
  * @return {Object} A React component.
  */
 export default class HeadCarousel extends React.Component {
+  /**
+   * constructor - Get params & set this.items.
+   *
+   * @param  {Object} props                   description
+   * @param  {Array} props.items              description
+   * @param  {String} props.items.src         description
+   * @param  {String} [props.items.alt]       description
+   * @param  {String} [props.items.title]     description
+   * @param  {String} [props.items.subTitle]  description
+   * @return {Void}                           Set the store.
+   */
   constructor(props) {
     super(props);
     if (!props.items) return console.error('ERROR - An array of items is required.');
-    this.items = props.items;
+    set(this, 'items', props.items);
   }
 
+  /**
+   * buildCarousel - Get this.items and build the carousel's items.
+   *
+   * @return {Array}  An array wich contains carousel's items.
+   */
   buildCarousel() {
     const output = [];
-    forEach(this.items, ({ src, alt, title, subTitle}) => {
+    forEach(this.items, ({ src, alt, title, subTitle}, i) => {
       output.push(
-        <Carousel.Item>
+        <Carousel.Item key ={i} >
           <Picture img={{ src, alt }} />
           <Carousel.Caption>
             <h3>{ title }</h3>
@@ -38,7 +51,6 @@ export default class HeadCarousel extends React.Component {
     return output;
   }
   render() {
-    console.log(this.buildCarousel());
     return (
       <Carousel id="head-carousel">
         { this.buildCarousel() }
