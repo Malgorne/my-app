@@ -1,4 +1,5 @@
 import React from 'react';
+import { HeadCarousel } from 'components';
 
 import './style.sass';
 
@@ -17,9 +18,7 @@ export default class Header extends React.Component {
    */
   render() {
     return (
-      <div id="header">
-        <h1>HEADER WORKS</h1>
-      </div>
+      <HeadCarousel />
     );
   }
 }
