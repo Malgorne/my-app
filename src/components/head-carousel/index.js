@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-// import { forEach, set } from 'lodash';
+import { forEach, set } from 'lodash';
 import kirby from '../../assets/img/kirby.jpg';
 import mario from '../../assets/img/mario.jpg';
 import zelda from '../../assets/img/zelda.jpg';
@@ -16,30 +16,32 @@ import './style.sass';
  * @return {Object} A React component.
  */
 export default class HeadCarousel extends React.Component {
+  constructor(props) {
+    super(props);
+    if (!props.items) return console.error('ERROR - An array of items is required.');
+    this.items = props.items;
+  }
+
+  buildCarousel() {
+    const output = [];
+    forEach(this.items, ({ src, alt, title, subTitle}) => {
+      output.push(
+        <Carousel.Item>
+          <Picture img={{ src, alt }} />
+          <Carousel.Caption>
+            <h3>{ title }</h3>
+            <p>{ subTitle }</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      );
+    });
+    return output;
+  }
   render() {
+    console.log(this.buildCarousel());
     return (
       <Carousel id="head-carousel">
-        <Carousel.Item>
-          <Picture img={{src: kirby, alt: 'kirby'}} />
-          <Carousel.Caption>
-            <h3>Kirby déchire tout!</h3>
-            <p>Et c'est qu'une ptite boule rose</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Picture img={{src: mario, alt: 'mario'}} />
-          <Carousel.Caption>
-            <h3>Mario ça déchire aussi!</h3>
-            <p>Pour une fois qu'un plombier chope une princesse...</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Picture img={{src: zelda, alt: 'zelda'}} />
-          <Carousel.Caption>
-            <h3>Zelda c'est génial</h3>
-            <p>Mais frappez pas les poules... c'est dangeureux</p>
-          </Carousel.Caption>
-        </Carousel.Item>
+        { this.buildCarousel() }
       </Carousel>
     );
   }

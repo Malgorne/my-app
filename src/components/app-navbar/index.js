@@ -13,7 +13,7 @@ import './style.sass';
 export default class AppNavbar extends React.Component {
   constructor(props) {
     super(props);
-    if (!props.links) return console.log("ERROR - This component needs a link's Array");
+    if (!props.links) return console.error("ERROR - This component needs a link's Array");
     set(this, 'links', props.links);
   }
 
