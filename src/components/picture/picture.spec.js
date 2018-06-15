@@ -7,6 +7,13 @@ import { shallow } from 'enzyme';
  */
 describe('components/picture', () => {
   it('should render without crashing', () => {
+    // With default img
     shallow(<Picture />);
+    // With a given img
+    const img = {
+      src: '../../assets/img/under-construction.png',
+      alt: 'test'
+    };
+    shallow(<Picture img={ img }/>);
   });
 });

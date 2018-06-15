@@ -1,6 +1,7 @@
 import Picture from './picture';
 import Board from './board';
 import Square from './square';
+import AppNavbar from './app-navbar';
 
 /**
  * Expose the components.
@@ -10,5 +11,6 @@ import Square from './square';
 export {
   Picture,
   Board,
-  Square
+  Square,
+  AppNavbar
 };
