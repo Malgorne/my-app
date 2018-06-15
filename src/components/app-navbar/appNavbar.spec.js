@@ -10,6 +10,13 @@ describe('components/appNavbar', () => {
     shallow(<AppNavbar />);
   });
   it('should build nav links', () => {
-
+    const links = [{
+      content: 'home',
+      src: '/'
+    }, {
+      content: 'tic tac toe',
+      src: '/tictactoe'
+    }];
+    shallow(<AppNavbar links={ links } />);
   });
 });

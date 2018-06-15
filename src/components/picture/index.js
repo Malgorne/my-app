@@ -24,7 +24,7 @@ export default class Picture extends React.Component {
   render() {
     return (
       <div className="picture text-center">
-        <img src={this.img.src} alt={this.img.path}/>
+        <img src={this.img.src} alt={this.img.alt}/>
       </div>
     );
   }

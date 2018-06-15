@@ -17,7 +17,7 @@ describe('screens/tic-tac-toe', () => {
     // player 1
     const turn3 = wrapper.find('button.square').at(4);
     turn3.simulate('click');
-    expect(wrapper.find('.game-info ol').length).toBe(1);
+    expect(wrapper.find('.game-info button').length).toBe(4);
     // player 2
     const turn4 = wrapper.find('button.square').at(5);
     turn4.simulate('click');
@@ -33,18 +33,19 @@ describe('screens/tic-tac-toe', () => {
 
     const button = wrapper.find('button.square').first();
     button.simulate('click');
-    expect(wrapper.find('.game-info ol li').length).toEqual(2);
+    console.log("wrapper.find('.game-info button')", wrapper.find('.game-info button'));
+    expect(wrapper.find('.game-info button').length).toEqual(2);
 
     const secondPlayer = wrapper.find('div.game-info').children().first().text();
     expect(secondPlayer).toEqual('Next player: O');
 
     simulateParty(wrapper);
-    expect(wrapper.find('.game-info ol li').length).toEqual(6);
+    expect(wrapper.find('.game-info button').length).toEqual(6);
 
     // button already clicked, no change
     const turn6 = wrapper.find('button.square').at(8);
     turn6.simulate('click');
-    expect(wrapper.find('.game-info ol li').length).toEqual(6);
+    expect(wrapper.find('.game-info button').length).toEqual(6);
 
     const winner = wrapper.find('div.game-info').children().first().text();
     expect(winner).toEqual('Winner: X');
@@ -52,10 +53,10 @@ describe('screens/tic-tac-toe', () => {
 
   it('should render the right turns', () => {
     const wrapper = mount(<TicTacToe/>);
-    simulateParty(wrapper);
-    const button1 = wrapper.find('.game-info ol li button').at(2);
+    const button1 = wrapper.find('button.square').at(2);
     button1.simulate('click');
+    simulateParty(wrapper);
     const firstPlayer = wrapper.find('div.game-info').children().first().text();
-    expect(firstPlayer).toEqual('Next player: X');
+    expect(firstPlayer).toEqual('Next player: O');
   });
 });
