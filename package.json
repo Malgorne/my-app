@@ -8,6 +8,16 @@
     "test": "jest",
     "doc": "jsdoc --readme README.md -c jsdoc/config.json -r --debug"
   },
+  "contributors": [
+    {
+      "name": "Benjamin FRITZ",
+      "email": "fritz.benj@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/b_fritz/my-app.git"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
